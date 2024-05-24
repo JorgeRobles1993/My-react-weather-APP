@@ -22,8 +22,6 @@ const Forecast = ({ data }) => {
                                     <label className="day">{forecastDays[idx]}</label>
                                     <label className="description">{item.weather[0].description}</label>
                                     <label className="min-max">{item.main.temp_min}°C / {item.main.temp_max}°C</label>
-
-
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
