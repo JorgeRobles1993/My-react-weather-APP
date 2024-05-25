@@ -4,10 +4,12 @@ import CurrentWeather from './components/current-weather/current-weather';
 import { WEATHER_API_KEY, WEATHER_API_URL } from './api';
 import { useState } from 'react';
 import Forecast from './components/forecast/forecast';
+import Popup from './components/popup/popup';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecastWeather, setForecast] = useState(null);
+  const [buttonPopup, setButtonPopup] = useState(false);
 
 
   const handleOnSearchChange = (searchData) => {
@@ -37,6 +39,13 @@ function App() {
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecastWeather &&<Forecast data={forecastWeather} />}
+      <div className="popup-maindiv">
+      <br></br>
+      <button onClick={() => setButtonPopup(true)}> La meteo a la mexicaine</button>
+    </div>
+      <Popup trigger={buttonPopup} setTrigger = {setButtonPopup}>
+        <img className="gif" src="./icons/8Osq.gif"/>
+      </Popup>
     </div>
   );
 }

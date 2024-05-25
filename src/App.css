@@ -12,3 +12,8 @@
   font-weight:bolder;
   padding: 10px;
 }
+
+.gif {
+  min-height: 350px;
+  min-width: 500px;
+}
