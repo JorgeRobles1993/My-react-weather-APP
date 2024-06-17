@@ -41,7 +41,7 @@ function App() {
       {forecastWeather &&<Forecast data={forecastWeather} />}
       <div className="popup-maindiv">
       <br></br>
-      <button onClick={() => setButtonPopup(true)}> La meteo a la mexicaine</button>
+      <button className="button-74" onClick={() => setButtonPopup(true)}> La meteo a la mexicaine</button>
     </div>
       <Popup trigger={buttonPopup} setTrigger = {setButtonPopup}>
         <img className="gif" src="./icons/8Osq.gif"/>
